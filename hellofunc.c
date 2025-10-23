@@ -171,3 +171,20 @@ int lookup(char *fichier_t3c, char *cible) {
 	free_node(node);
 	return 0;
 }
+
+int lookup_entree(char *fichier_t3c) {
+	Node *node = load(fichier_t3c);
+	if(!node) {
+		return 1;
+	}
+	char ligne[1024];
+	while(fgets(ligne, sizeof(ligne), stdin)) {
+		filtre(ligne);
+		Node *n = find_node(node, ligne);
+		if(n) {
+			printf("\nMot de passe trouve:\nHash: %s\nMDP: %s\n", n->condensat, n->chaine);
+		}
+	}
+	free_node(node);
+	return 0;
+}
