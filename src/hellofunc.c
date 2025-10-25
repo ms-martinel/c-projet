@@ -67,7 +67,7 @@ int generate(char *fichier, char *fichier_output, char* hachage) {
 		return 1;
 	}
 
-	printf("\nhachage utilise: %s", hachage);
+	printf("\nhachage utilise: %s\n", hachage);
 	char ligne[1024];
 	while(fgets(ligne, sizeof(ligne), fp)) {
 		filtre(ligne);
@@ -88,6 +88,7 @@ int generate(char *fichier, char *fichier_output, char* hachage) {
 	}
 	fclose(fp);
 	fclose(fo);
+	printf("\nGenerate termine.\n");
 	return 0;
 }
 
@@ -188,6 +189,7 @@ int lookup(char *fichier_t3c, char *cible) {
 	}
 	fclose(c);
 	free_node(node);
+	printf("\nLookup termine.\n");
 	return 0;
 }
 
@@ -205,5 +207,6 @@ int lookup_entree(char *fichier_t3c) {
 		}
 	}
 	free_node(node);
+	printf("\nLookup termine.\n");
 	return 0;
 }
