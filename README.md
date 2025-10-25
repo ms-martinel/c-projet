@@ -1,6 +1,7 @@
 # Projet C - François MARTINEL
 ## Installation:
 ```bash
+git clone https://github.com/ms-martinel/c-projet
 sudo apt-get update
 sudo apt-get install libssl-dev
 ```
