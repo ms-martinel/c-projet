@@ -6,7 +6,7 @@
 
 int main(int argc, char * argv[]) {
     if(argc < 2 || strcmp(argv[1], "help") == 0 || strcmp(argv[1], "h") == 0 || strcmp(argv[1], "-h") == 0) {
-        printf("Arguments invalides. Exemples valides:\nPour Generate un tableau .t3c a partir d'une liste de mdp:\n./main G -i list.txt -o output.t3c\nPour Lookup a partir d'une table .t3c une liste de condensats:\n./main L -t output.t3c -c condensats.txt\nPour saisir les condensats au clavier:\n./main L -t output.t3c\nOption -a pour choix algo avec: sha1, ripemd160, sha224, sha256, sha384, sha512, md5 (ex: -a sha256)\n");
+        printf("Arguments invalides. Exemples valides:\nPour Generate un tableau .t3c a partir d'une liste de mdp:\n./main G -i list.txt -o output.t3c\nPour Lookup a partir d'une table .t3c une liste de condensats:\n./main L -t output.t3c -c condensats.txt\nPour saisir les condensats au clavier:\n./main L -t output.t3c\nOption -a pour choix algo avec: sha1, ripemd160, sha224, sha256, sha384, sha512, md5 (ex: -a sha256)\nTest valgrind (à installer):\nvalgrind --leak-check=full ./main G -i list.txt -o output.t3c -a sha256\n");
         return 1;
     }
     if(strcmp(argv[1], "G") == 0) {
