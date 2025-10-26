@@ -1,9 +1,10 @@
 # Projet C - François MARTINEL
+Code en langage C qui permet de générer des condensats (G) et de rechercher parmi une liste de condensats (L pour lookup).
 ## Installation:
 ```bash
 git clone https://github.com/ms-martinel/c-projet
 sudo apt-get update
-sudo apt-get install libssl-dev
+sudo apt-get install -y build-essential libssl-dev make gcc
 ```
 ## Execution:
 ```bash

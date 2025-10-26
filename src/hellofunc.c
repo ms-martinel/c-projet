@@ -155,6 +155,7 @@ Node* load(char *fichier) {
 	char ligne[1024];
 
 	while(fgets(ligne, sizeof(ligne), fp)) {
+		filtre(ligne);
 		char *strip = strchr(ligne, '\t');
 		if(!strip) {
 			continue;
@@ -184,7 +185,9 @@ int lookup(char *fichier_t3c, char *cible) {
 		filtre(ligne);
 		Node *n = find_node(node, ligne);
 		if(n) {
-			printf("\nMot de passe trouve:\nHash: %s\nMDP: %s\n", n->condensat, n->chaine);
+			printf("%s\n", n->chaine);
+		} else {
+			printf("\n");
 		}
 	}
 	fclose(c);
