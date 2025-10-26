@@ -32,3 +32,7 @@ make
 ./main G -i list.txt -o output.t3c -a sha512
 ```
 Pour le hachage: sha1, ripemd160, sha224, sha256, sha384, sha512, md5.
+
+## Vidéo de démonstration:
+Voici une vidéo montrant l'installation et l'execution du programme.
+[![Voir la vidéo de démonstration](video/video.png)](video/video_demo.mp4)
